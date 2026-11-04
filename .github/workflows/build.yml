@@ -1,0 +1,24 @@
+name: Build PSP Roblox
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/pspdev/pspdev:latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: make
+
+      - name: Upload EBOOT
+        uses: actions/upload-artifact@v4
+        with:
+          name: roblox-psp
+          path: |
+            EBOOT.PBP
+          if-no-files-found: error
