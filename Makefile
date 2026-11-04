@@ -9,7 +9,7 @@ ASFLAGS = $(CFLAGS)
 LIBDIR =
 LDFLAGS =
 
-LIBS = -lpspgu -lpspvram -lpspvfpu -lm -lpspdebug -lpspdisplay -lpspkernel -lpspctrl
+LIBS = -lpspgum -lpspgu -lpspvram -lpspvfpu -lm -lpspdebug -lpspdisplay -lpspkernel -lpspctrl
 
 EXTRA_TARGETS = EBOOT.PBP
 PSP_EBOOT_TITLE = Roblox PSP
